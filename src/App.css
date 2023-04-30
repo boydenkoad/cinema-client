@@ -1,0 +1,26 @@
+.App{
+  background-color: #071825;
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+.Wrapper{
+  max-width: 1190px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.App__header{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.App__pages{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

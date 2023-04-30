@@ -1,0 +1,23 @@
+.MoviePage{
+    // display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.MoviePage__calendar-block{
+    position: absolute;
+    height: 190px;
+    width: 100%;
+    background-color: #041019;
+    z-index: 0;
+}
+
+.MoviePage__columns{
+    top: 190px;
+    position: absolute;
+    color: white;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+}

@@ -1,0 +1,44 @@
+.Header{
+    height: 93px;
+}
+
+.Header__container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1191px;
+}
+
+.Header__logo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #13B9DE;
+    
+    & h1{
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    & h1 span{
+        color: white;
+    }
+
+}
+
+
+.Header__nav__link{
+    text-transform: uppercase;
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s;
+
+    &:hover{
+        color: #13B9DE;
+    }
+}

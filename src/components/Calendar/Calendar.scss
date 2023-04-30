@@ -1,0 +1,28 @@
+.Calendar{
+    background-color: #071825;
+    background-image: url('../../assets/calendar.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0);
+    visibility: none;
+    
+    &:hover{
+        background-color: #0d2e47;
+    }
+    
+}
+
+
+.flatpickr-day.selected{
+    background: #eff8ff8e;
+    border: none;
+
+    &:hover{
+        background: #eff8ff8e;
+    }
+}

@@ -1,0 +1,48 @@
+.Day{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 169px;
+    height: 50px;
+    background: #071825;
+    border-radius: 5px;
+    padding: 15px;
+    color: #13b9de;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover{
+        background-color: #132d41;
+    }
+}
+
+.Day__day-info{
+    flex-grow: 1;
+
+    &__week{
+        font-weight: 700;
+        font-size: 15px;
+    };
+
+    &__month{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+.Day__number-of-the-month{
+    margin-right: 10px;
+
+    & span{
+        font-size: 26px;
+        font-weight: 500;
+    }
+}
+
+.Day__current_day{
+    background-color: white;
+
+    &:hover{
+        background-color: white;
+    }
+}

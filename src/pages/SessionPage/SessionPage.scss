@@ -1,0 +1,64 @@
+.SessionPage{
+    width: 100%;
+}
+
+.SessionPage__calendar-block{
+    background-color: #041019;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 55px;
+}
+
+.SessionPage__calendar-block__days__info{
+    max-width: 1070px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+
+.SessionPage__calendar-block__days__elements{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    
+    color: white;
+    border-bottom:1px solid #13B9DE;
+}
+
+.SessionPage__calendar-block__days{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+
+  &__element{
+    margin-right: 1px;
+  }
+
+}
+
+
+
+
+.SessionPage__sissions-block{
+    display: flex;
+    justify-content: center;
+}
+
+
+.Wrapper__sissions-block{
+    
+}
+
+.SessionPage__sissions-block__element{
+    margin: 16px;
+}

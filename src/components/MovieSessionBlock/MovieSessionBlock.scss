@@ -1,0 +1,53 @@
+.MovieSessionBlock{
+    display: flex;
+    box-sizing: border-box;
+    width: 562px;
+    height: 344px;
+    border: 1px solid #13B9DE;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.MovieSessionBlock__left-column{
+    width: 210px;
+    height: 344px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.MovieSessionBlock__right-column{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 344px;
+    flex-grow: 1;
+
+    &__title{
+        color: white;
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    &__category{
+        margin-bottom: 10px;
+    }
+
+    &__time-list{
+        display: flex;
+        max-width: 312px;
+        flex-wrap: wrap;
+        
+
+        &__element{
+            margin:10px 3px;
+        }
+
+        &__element:hover{
+            margin:10px 3px;
+        }
+    }
+    
+}
