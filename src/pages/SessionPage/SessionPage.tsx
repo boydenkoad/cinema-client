@@ -1,58 +1,35 @@
 
 import classNames from 'classnames'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, useParams} from 'react-router-dom'
 import { Calendar } from '../../components/Calendar/Calendar'
 import { Day } from '../../components/Day/Day'
-import { MovieSessionBlock } from '../../components/MovieSessionBlock/MovieSessionBlock'
-import './SessionPage.scss'
+import { MovieSessionCard } from '../../components/MovieSessionBlock/MovieSessionCard'
+import { useCalendar } from '../../app/useCalendar'
 
+import './SessionPage.scss'
+import { sessionService } from '../../services/session.service'
+import { useEffect, useState } from 'react'
+import { IMovieSessionCard } from '../../models/movieSessionCard.interface'
 interface SessionPageProps{
     className?:string
 }
 
-
-function getNextDay(nextDay:number) {
-    
-    const date = new Date()
-    
-    date.setDate(date.getDate() + nextDay)
-
-    const currentDate = {
-        day:date.getDate(),
-        month:date.getMonth() + 1,
-        year:date.getFullYear()
-    }
-
-    const result = `${currentDate.day}-${currentDate.month < 10 ?`0${currentDate.month}`: currentDate.month}-${currentDate.year}`
-
-    return result
-
-}
-
-
-const date = new Date()
-date.setDate(date.getDate() + 1)
-const currentDateObject = {
-    day:date.getDate(),
-    month:date.getMonth() + 1,
-    year:date.getFullYear()
-}
-
-
-
-
-const dateId:string = `${currentDateObject.day}-${currentDateObject.month < 10 ?`0${currentDateObject.month}`:currentDateObject.month}-${currentDateObject.year}`
-
 export const SessionPage:React.FC<SessionPageProps>=({className})=>{
 
+    const [sessions,setSessions] = useState<IMovieSessionCard[]>([])
+    const {dateId,getNextDay,handleChangeUrl} = useCalendar()
+    const {date} = useParams()
 
+    useEffect(()=>{
+        setSessions(sessionService.getSessions(date||getNextDay(0)))
+    },[date])
 
     return(
         <div className={classNames('SessionPage',className)}>
                 <div className="SessionPage__calendar-block">
                     <div className="SessionPage__calendar-block__days">
                         <div className="SessionPage__calendar-block__days__info">
-                            <span>Расписани сеансов на Сегодня</span>
+                            <span>Расписание сеансов на Сегодня</span>
                         </div>
                         <div className="SessionPage__calendar-block__days__elements">
                             <Link to={getNextDay(0)}>
@@ -73,18 +50,22 @@ export const SessionPage:React.FC<SessionPageProps>=({className})=>{
                             <Link to={getNextDay(5)}>
                                 <Day toDay={dateId} nextDay={5} className='SessionPage__calendar-block__days__element'/>
                             </Link>
-                            <Calendar className='SessionPage__calendar-block__days__element'/>
+                            <Calendar onClickHandle={handleChangeUrl}/>
                         </div>
-                       
                     </div>
                 </div>
                 <div className="SessionPage__sissions-block">
                     <div className="Wrapper Wrapper__sissions-block">
-                        <MovieSessionBlock className='SessionPage__sissions-block__element'/>
-                        <MovieSessionBlock className='SessionPage__sissions-block__element'/>
-                        <MovieSessionBlock className='SessionPage__sissions-block__element'/>
-                        <MovieSessionBlock className='SessionPage__sissions-block__element'/>
-                        <MovieSessionBlock className='SessionPage__sissions-block__element'/>
+                        {sessions.map(movie=><MovieSessionCard
+                        key={movie.id}
+                        genre={movie.genre}
+                        sessions={movie.sessions}
+                        id={movie.id}
+                        name={movie.name}
+                        poster={movie.poster}
+                        rating={movie.rating}
+                        slug={movie.slug}
+                        className='SessionPage__sissions-block__element'/>)}
                     </div>
                     
                 </div>

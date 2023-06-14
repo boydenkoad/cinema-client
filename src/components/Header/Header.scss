@@ -37,8 +37,9 @@
     text-decoration: none;
     color: white;
     transition: all 0.2s;
-
+    cursor: pointer;
     &:hover{
         color: #13B9DE;
+    
     }
 }

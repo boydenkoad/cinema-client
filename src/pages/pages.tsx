@@ -15,11 +15,14 @@ export const Pages:React.FC<PagesProps>=({className})=>{
         <div className={classNames('Pages',className)}>
             <Routes>
                 <Route path='/session/' element={<SessionPage/>}>
-                    <Route path=':id'  element={<SessionPage/>}/>
+                    <Route path=':date'  element={<SessionPage/>}/>
                 </Route>
                 <Route path='/movies' element={<MoviesPage/>}/>
-                <Route path='/movies/1' element={<MoviePage/>}/>
-                <Route path='/selectplace' element={<ChoosePlacePage/>}/>
+                <Route path='/movies' element={<MoviePage/>}/>
+                <Route path='/movie/:slug/' element={<MoviePage/>}>
+                    <Route path='/movie/:slug/:date' element={<MoviePage/>}/>
+                </Route>
+                <Route path='/movie/:slug/:date/choose-place' element={<ChoosePlacePage/>}/>
             </Routes>
         </div>
         

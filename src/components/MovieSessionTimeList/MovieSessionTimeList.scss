@@ -1,0 +1,14 @@
+.SessionTimeList{
+    display: flex;
+    align-items: center;
+    height: 100px;
+
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.SessionTimeList__time{
+    margin-left: 20px;
+}

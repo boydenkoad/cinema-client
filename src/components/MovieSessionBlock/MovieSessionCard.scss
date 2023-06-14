@@ -1,4 +1,4 @@
-.MovieSessionBlock{
+.MovieSessionCard{
     display: flex;
     box-sizing: border-box;
     width: 562px;
@@ -8,25 +8,47 @@
     overflow: hidden;
 }
 
-.MovieSessionBlock__left-column{
-    width: 210px;
-    height: 344px;
+
+@media screen and (max-width:1200px) {
+    .MovieSessionCard{
+        display: flex;
+        box-sizing: border-box;
+        width: 500px;
+        height: 370px;
+    }
+}
+
+
+@media screen and (max-width:1070px) {
+    .MovieSessionCard{
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        height: 360px;
+    }
+}
+
+.MovieSessionCard__left-column{
+    min-width: 210px;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.MovieSessionBlock__right-column{
-    padding: 10px;
+.MovieSessionCard__right-column{
+    padding: 10px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 344px;
+    height: 100%;
     flex-grow: 1;
+    align-items: start;
+
 
     &__title{
         color: white;
-        font-size: 32px;
+        font-size: 25px;
         font-weight: 500;
         margin-bottom: 4px;
     }

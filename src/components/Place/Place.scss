@@ -1,0 +1,28 @@
+.Place{
+    width: 35px;
+    height: 35px;
+    background: #676767;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffff;
+    border: 1px solid #13B9DE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+
+    &__check{
+        background-color: rgb(255, 255, 0);
+        color: #000;
+    }
+
+    &__disabled{
+        background-color: red;
+    }
+
+   &:hover{
+
+   }
+}

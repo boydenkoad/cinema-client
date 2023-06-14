@@ -4,6 +4,8 @@
     align-items: center;
     width: 72px;
     height: 52px;
+
+   
 }
 
 .MovieSessionTime__time{
@@ -11,13 +13,14 @@
     width: 72px;
     height: 39px;
     border: 1px solid #13B9DE;
+    background-color: #071825;
     border-radius: 5px;
     margin-bottom: 3px;
     cursor: pointer;
     transition: all 0.3s;
 
     &:hover{
-        background-color: #ffffff18;
+        background-color: #04375e;
     }
 
     &__clock{

@@ -1,0 +1,76 @@
+.ChoosePlacePage{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    &__container{
+        width: 1000px;
+        box-sizing: border-box;
+        // border: 1px solid #ffff;
+    }
+
+    &__chosenPlaces{
+        position: absolute;
+        bottom: 1px;
+        height: 100px;
+        padding: 0 20px;
+        border-top: #13B9DE 1px solid;
+        width: 100%;
+        color:#ffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.ChoosePlacePage__screen{
+    width: 100%;
+    background-color: gray;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    color: #ffff;
+}
+
+
+.ChoosePlace__row{
+    display: flex;
+    height: 45px;
+    padding: 0 20px;
+    align-items: center;
+    border: 1px solid #13B9DE;
+    border-radius: 5px;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+    >span{
+        color: #ffff;
+        font-size: 20px;
+        margin: 0 40px;
+    }
+
+    &__list{
+        display: flex;
+    }
+
+
+    &__el{
+        margin: 0 5px;
+    }
+
+    
+}
+
+.chosenPlaces__btn{
+    >button{
+        border-radius: 5px;
+        width: 300px;
+        height: 70px;
+        border: 1px solid #13B9DE;
+        color: #13B9DE;
+        font-size: 30px;
+        font-weight: 400;
+    }
+}

@@ -9,6 +9,16 @@
     margin-bottom: 55px;
 }
 
+@media screen and (max-width:1075px) {
+    .SessionPage__calendar-block{
+        background-color: #041019;
+        height: 150px;
+        width: 100%;
+        margin-bottom: 55px;
+        display: none;
+    }
+}
+
 .SessionPage__calendar-block__days__info{
     max-width: 1070px;
     width: 100%;
@@ -52,11 +62,18 @@
 .SessionPage__sissions-block{
     display: flex;
     justify-content: center;
+    min-width: 100%;
 }
 
 
 .Wrapper__sissions-block{
-    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.SessionPage__sissions-block__element{
+    margin: 16px;
 }
 
 .SessionPage__sissions-block__element{
